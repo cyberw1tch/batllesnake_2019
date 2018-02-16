@@ -21,7 +21,7 @@ def start():
     board_width = data.get('width')
     board_height = data.get('height')
 
-    head_url = '%s://%s/static/head.png' % (
+    head_url = '%s://%s/static/mariah.jpg' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -29,10 +29,10 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#00FF00',
+        'color': '#FFFFFF',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'battlesnake-python'
+        'name': 'Mariah Scarey'
     }
 
 
