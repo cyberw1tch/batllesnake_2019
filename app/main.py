@@ -31,7 +31,9 @@ def start():
         'color': '#CACFFF',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
-        'name': 'Mariah Scarey'
+        'name': 'Mariah Scarey',
+        'head_type': 'tongue',
+        'tail_type': 'fat-rattle'
     }
 
 
