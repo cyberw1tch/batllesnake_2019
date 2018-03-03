@@ -19,7 +19,7 @@ def start():
     board_width = data.get('width')
     board_height = data.get('height')
 
-    head_url = '%s://%s/static/mariah.jpg' % (
+    head_url = 'https://i.pinimg.com/736x/d6/11/d4/d611d43cc3146764a204787ee96fed5a.jpg' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -27,7 +27,7 @@ def start():
     # TODO: Do things with data
 
     return {
-        'color': '#FFFFFF',
+        'color': '#CACFFF',
         'taunt': '{} ({}x{})'.format(game_id, board_width, board_height),
         'head_url': head_url,
         'name': 'Mariah Scarey'
