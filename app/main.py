@@ -47,7 +47,7 @@ def move():
 	direction = random.choice(directions)
     return {
         'move': direction,
-        'taunt': 'battlesnake-python!'
+        'taunt': 'All I want for Christmas is your life'
     }
 
 
