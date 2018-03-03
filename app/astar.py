@@ -24,6 +24,21 @@ def astar(array, start, goal):
             while current in came_from:
                 data.append(current)
                 current = came_from[current]
+            #Create (y,x) point we are moving to
+            point = data[len(data)-1]
+            #Check if it's a move right:
+            if point[1]-start[1] == 1:
+                return 'right'
+            #left:
+            if point[1]-start[1] == -1:
+                return 'left'
+            #up:
+            if point[0]-start[0] == -1:
+                return 'up'
+            #down:
+            if point[0]-start[0] == 1:
+                return 'down'
+
             return data[len(data)-1]
 
         close_set.add(current)
