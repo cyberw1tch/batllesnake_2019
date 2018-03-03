@@ -1,8 +1,13 @@
 def parsesnakes(data):
 	snakes = []
 
-	for snake in data['snakes']:
-		x = [snake['body']['data'][i]['x'] for i in snake['length']
-		y = [snake['body']['data'][i]['y'] for i in snake['length']
+	for snake in data['snakes']['data']:
+		x = [snake['body']['data'][i]['x'] for i in range(snake['length'])]
+		y = [snake['body']['data'][i]['y'] for i in range(snake['length'])]
 
-	list(zip(y,x))
+		if snake == data['you']:
+			snakes.insert(0,list(zip(y,x)))
+		else:
+			snakes.append(list(zip(y,x)))
+
+	return snakes
