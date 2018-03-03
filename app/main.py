@@ -44,7 +44,7 @@ def move():
 
     # up, down, left, right
     directions = ['up', 'down', 'left', 'right']
-	direction = random.choice(directions)
+    direction = random.choice(directions)
     return {
         'move': direction,
         'taunt': 'All I want for Christmas is your life'
