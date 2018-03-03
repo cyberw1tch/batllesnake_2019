@@ -1,7 +1,19 @@
-def choice (data):
-    # if health < whatever we're worried about AND snake is of even length:
-        # chase tail
-    # else
-        # chase food!
+import json
 
-    return #up, down, left, right, w/e
+def choice (data):
+    health = data["snakes"]["data"][0]["health"]
+    
+    if health > 45:
+        # chase your own fucking tail
+        direction = "up" # make this it's astar tail
+    else:
+        # locate food!!!!!
+        direction = "up" # make the direction right
+
+    return direction
+
+# this is all for testing
+if __name__=="__main__":
+    with open('move.json') as json_data:
+        d = json.load(json_data)
+        choice(d)
