@@ -5,6 +5,7 @@ import snakechoice
 import parsesnakes
 import parsefood
 import astar
+import gametocode
 
 @bottle.route('/')
 def static():
@@ -43,10 +44,10 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    snakes = parsesnakes(data)
-    omnom = parsefood(data)
-    board,goal,head = tonumpy(snakes,omnom, board_width, board_height)
-    direction = astar(board,head,goal)
+    snakes = parsesnakes.parsesnakes(data)
+    omnom = parsefood.parsefood(data)
+    board,goal,head = gametocode.tonumpy(snakes,omnom, board_width, board_height)
+    direction = astar.astar(board,head,goal)
 
     # up, down, left, right
     #directions = ['up', 'down', 'left', 'right']
