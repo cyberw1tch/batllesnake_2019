@@ -43,14 +43,14 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    snakes = parsesnakes(data)
-    omnom = parsefood(data)
-    board,goal,head = tonumpy(snakes,omnom, board_width, board_height)
-    direction = astar(board,head,goal)
+    #snakes = parsesnakes(data)
+    #omnom = parsefood(data)
+    #board,goal,head = tonumpy(snakes,omnom, board_width, board_height)
+    #direction = astar(board,head,goal)
 
     # up, down, left, right
-    #directions = ['up', 'down', 'left', 'right']
-    #direction = random.choice(directions)
+    directions = ['up', 'down', 'left', 'right']
+    direction = random.choice(directions)
     return {
         'move': direction,
         'taunt': 'All I want for Christmas is your life'
