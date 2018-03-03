@@ -3,9 +3,11 @@ import numpy as np
 
 def main():
 
-    tonumpy(10,10)
+    sneks = [[(0,0),(0,1)][(9,3),(9,4)]]
 
-def tonumpy ( width, height):
+    tonumpy(sneks,10,10)
+
+def tonumpy (enemies ,width, height):
     
     code_board = np.zeros((height,width), dtype=int)
     print(code_board)
