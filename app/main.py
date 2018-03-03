@@ -1,6 +1,7 @@
 import bottle
 import os
 import random
+import snakechoice
 
 @bottle.route('/')
 def static():
@@ -41,10 +42,9 @@ def start():
 def move():
     data = bottle.request.json
 
-    # TODO: Do things with data
-    
-    directions = ['up', 'down', 'left', 'right']
-    direction = random.choice(directions)
+    # up, down, left, right
+    direction = snakechoice.choice(data)
+
     print(direction)
     return {
         'move': direction,
