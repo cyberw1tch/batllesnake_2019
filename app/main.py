@@ -41,6 +41,10 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    snakes = parsesnakes(data)
+    omnom = parsefood(data)
+    board,goal,head = tonumpy(snakes,omnom, board_width, board_height)
+    direction = astar(board,head,goal)
 
     # up, down, left, right
     directions = ['up', 'down', 'left', 'right']

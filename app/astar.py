@@ -1,11 +1,13 @@
 from heapq import *
+import gametocode
 
 def heuristic(a, b):
     return (b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2
 
 def astar(array, start, goal):
 
-    neighbors = [(0,1),(0,-1),(1,0),(-1,0),(1,1),(1,-1),(-1,1),(-1,-1)]
+    #neighbors = [(0,1),(0,-1),(1,0),(-1,0),(1,1),(1,-1),(-1,1),(-1,-1)]
+    neighbors = [(start[0],start[1]+1),(start[0]+1,start[1]),(start[0],start[1]-1),(start[0]-1,start[1])]
 
     close_set = set()
     came_from = {}
