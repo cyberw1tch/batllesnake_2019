@@ -2,6 +2,9 @@ import bottle
 import os
 import random
 import snakechoice
+import parsesnakes
+import parsefood
+import astar
 
 @bottle.route('/')
 def static():
@@ -48,8 +51,8 @@ def move():
     direction = astar(board,head,goal)
 
     # up, down, left, right
-    directions = ['up', 'down', 'left', 'right']
-    direction = random.choice(directions)
+    #directions = ['up', 'down', 'left', 'right']
+    #direction = random.choice(directions)
     return {
         'move': direction,
         'taunt': 'All I want for Christmas is your life'

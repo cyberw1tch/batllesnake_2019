@@ -1,12 +1,16 @@
 import numpy as np
-
+import time
 
 #def main():
 
-    #sneks = [[(0,0),(0,1)],[(9,3),(9,4)]]
-    #snack = [(5,4)(3,3)]
+    #t1 = time.time()
 
-    #tonumpy(snack,sneks,10,10)
+    #sneks = [[(0,0),(0,1)],[(9,3),(9,4)]]
+    #snack = [(5,4),(3,3)]
+
+    #tonumpy(sneks,snack,20,20)
+    #t2 = time.time()
+    #print(t2-t1)
 
 def tonumpy (enemies ,food, width, height):
 
