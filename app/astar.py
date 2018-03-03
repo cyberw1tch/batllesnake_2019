@@ -25,7 +25,7 @@ def astar(array, start, goal):
                 data.append(current)
                 current = came_from[current]
             #Create (y,x) point we are moving to
-            point = data[len(data)-1]
+            point = data[-1]
             #Check if it's a move right:
             if point[1]-start[1] == 1:
                 return 'right'
