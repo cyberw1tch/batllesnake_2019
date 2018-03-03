@@ -1,13 +1,12 @@
 import json
 
 def choice (data):
-    health = data["snakes"]["data"][0]["health"]
+    d = json.load(data)
+    health = d["snakes"]["data"][0]["health"]
     
-    if health > 45:
-        # chase your own fucking tail
+    if health > 45: # chase your own tail
         direction = "up" # make this it's astar tail
-    else:
-        # locate food!!!!!
+    else: # locate food
         direction = "up" # make the direction right
 
     return direction
