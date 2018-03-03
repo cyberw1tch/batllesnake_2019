@@ -20,12 +20,10 @@ def start():
     board_width = data.get('width')
     board_height = data.get('height')
 
-    head_url = ''
-
-    #head_url = 'https://i.pinimg.com/736x/d6/11/d4/d611d43cc3146764a204787ee96fed5a.jpg' % (
-    #    bottle.request.urlparts.scheme,
-    #    bottle.request.urlparts.netloc
-    #)
+    head_url = '%s://%s/static/mariah.png' % (
+        bottle.request.urlparts.scheme,
+        bottle.request.urlparts.netloc
+    )
 
     # TODO: Do things with data
 
