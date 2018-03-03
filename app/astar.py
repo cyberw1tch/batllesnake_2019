@@ -1,7 +1,4 @@
-import numpy
 from heapq import *
-import time
-
 
 def heuristic(a, b):
     return (b[0] - a[0]) ** 2 + (b[1] - a[1]) ** 2
@@ -17,7 +14,7 @@ def astar(array, start, goal):
     oheap = []
 
     heappush(oheap, (fscore[start], start))
-    
+
     while oheap:
 
         current = heappop(oheap)[1]
@@ -27,7 +24,7 @@ def astar(array, start, goal):
             while current in came_from:
                 data.append(current)
                 current = came_from[current]
-            return data
+            return data[len(data)-1]
 
         close_set.add(current)
         for i, j in neighbors:
@@ -47,35 +44,10 @@ def astar(array, start, goal):
             if neighbor in close_set and tentative_g_score >= gscore.get(neighbor, 0):
                 continue
                 
-            if  tentative_g_score < gscore.get(neighbor, 0) or neighbor not in [i[1]for i in oheap]:
+            if  tentative_g_score < gscore.get(neighbor, 0) or neighbor not in [i[1] for i in oheap]:
                 came_from[neighbor] = current
                 gscore[neighbor] = tentative_g_score
                 fscore[neighbor] = tentative_g_score + heuristic(neighbor, goal)
                 heappush(oheap, (fscore[neighbor], neighbor))
-                
+            
     return False
-
-'''Here is an example of using my algo with a numpy array,
-   astar(array, start, destination)
-   astar function returns a list of points (shortest path)'''
-
-nmap = numpy.array([
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1,1,1,0,1],
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    [1,0,1,1,1,1,1,1,1,1,1,1,1,1],
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1,1,1,0,1],
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    [1,0,1,1,1,1,1,1,1,1,1,1,1,1],
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,1,1,1,1,1,0,1],
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0]])
-    
-t0 = time.clock()
-
-print(astar(nmap, (0,0), (10,13)))
-
-t1 = time.clock()
-
-print(t1-t0)
