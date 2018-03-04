@@ -6,7 +6,7 @@ import astar
 
     #t1 = time.time()
 
-    #sneks = [[(0,0),(0,1)],[(9,3),(9,4)]]
+    #sneks = [[(17,17),(17,18)],[(9,3),(9,4)]]
     #snack = [(5,4),(3,3)]
 
     #board,goal,head = tonumpy(sneks,snack,20,20)
@@ -24,9 +24,9 @@ def tonumpy (enemies ,food, width, height):
         for coord in block:
             code_board[coord[0]][coord[1]] = 1
 
-    #print(code_board,food[0],enemies[0][0])
+    print(code_board,food[0],enemies[0][0])
     return code_board,food[0],enemies[0][0]
     #print(code_board)
 
 #if __name__=="__main__":
-#    main()
+    #main()
