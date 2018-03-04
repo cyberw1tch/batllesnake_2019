@@ -8,7 +8,7 @@ def astar(array, start, goal):
 
     neighbors = [(0,1),(0,-1),(1,0),(-1,0)]
     #neighbors = [(start[0],start[1]+1),(start[0]+1,start[1]),(start[0],start[1]-1),(start[0]-1,start[1])]
-    print(neighbors)
+    #print(neighbors)
     close_set = set()
     came_from = {}
     gscore = {start:0}
@@ -16,7 +16,7 @@ def astar(array, start, goal):
     oheap = []
 
     heappush(oheap, (fscore[start], start))
-    print(oheap)
+    #print(oheap)
 
     while oheap:
 
