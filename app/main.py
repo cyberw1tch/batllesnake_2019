@@ -47,18 +47,19 @@ def move():
     board_width = data.get('width')
     board_height = data.get('height')
     snakes = parsesnakes.parsesnakes(data)
-    print(snakes)
+    #print(snakes)
     omnom = parsefood.parsefood(data)
-    print(omnom)
+    #print(omnom)
     board,goal,head = gametocode.tonumpy(snakes,omnom,board_width,board_height)
-    print(board)
-    print(goal)
-    print(head)
+    #print(board)
+    #print(goal)
+    #print(head)
     direction = astar.astar(board,head,goal)
+    print(direction)
 
     # up, down, left, right
-    directions = ['up', 'down', 'left', 'right']
-    direction = random.choice(directions)
+    #directions = ['up', 'down', 'left', 'right']
+    #direction = random.choice(directions)
     return {
         'move': direction,
         'taunt': 'All I want for Christmas is your life'
