@@ -28,6 +28,7 @@ def astar(array, start, goal):
                 current = came_from[current]
             #Create (y,x) point we are moving to
             point = data[-1]
+            print(point)
             #Check if it's a move right:
             if point[1]-start[1] == 1:
                 return 'right'
@@ -40,8 +41,6 @@ def astar(array, start, goal):
             #down:
             if point[0]-start[0] == 1:
                 return 'down'
-
-            return data[len(data)-1]
 
         close_set.add(current)
         for i, j in neighbors:
