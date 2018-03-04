@@ -5,9 +5,9 @@ def choice (data):
     health = d["snakes"]["data"][0]["health"]
     
     if health > 45: # chase your own tail
-        direction = "up" # make this it's astar tail
+        direction = "down" # make this it's astar tail
     else: # locate food
-        direction = "up" # make the direction right
+        direction = "down" # make the direction right
 
     return direction
 
