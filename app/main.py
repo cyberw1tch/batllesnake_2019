@@ -47,8 +47,13 @@ def move():
     board_height = data.get('height')
     data = bottle.request.json
     snakes = parsesnakes.parsesnakes(data)
+    print(snakes)
     omnom = parsefood.parsefood(data)
-    board,goal,head = gametocode.tonumpy(snakes,omnom, board_width, board_height)
+    print(omnom)
+    board,goal,head = gametocode.tonumpy(snakes,omnom,board_width,board_height)
+    print(board)
+    print(goal)
+    print(head)
     direction = astar.astar(board,head,goal)
 
     # up, down, left, right
