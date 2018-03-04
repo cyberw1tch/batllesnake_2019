@@ -21,6 +21,10 @@ def tonumpy (enemies ,food, width, height):
     #print(code_board)
 
     for block in enemies:
+        code_board[block[0][0]+1][block[0][1]] = 1
+        code_board[block[0][0]][block[0][1]+1] = 1
+        code_board[block[0][0]-1][block[0][1]] = 1
+        code_board[block[0][0]][block[0][1]-1] = 1
         for coord in block[:-1]:
             code_board[coord[0]][coord[1]] = 1
 
