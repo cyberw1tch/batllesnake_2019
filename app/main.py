@@ -43,9 +43,9 @@ def start():
 
 @bottle.post('/move')
 def move():
+    data = bottle.request.json
     board_width = data.get('width')
     board_height = data.get('height')
-    data = bottle.request.json
     snakes = parsesnakes.parsesnakes(data)
     print(snakes)
     omnom = parsefood.parsefood(data)
