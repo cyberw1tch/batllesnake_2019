@@ -62,7 +62,7 @@ def move():
     #direction = random.choice(directions)
     return {
         'move': direction,
-        'taunt': 'All I want for Christmas is your life'
+        'taunt': 'All I want for Christmas is your snake'
     }
 
 
