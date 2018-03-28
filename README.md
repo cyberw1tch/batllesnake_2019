@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # battlesnake-python
 
 A baller [BattleSnake AI](http://battlesnake.io) written in Python. 
@@ -61,3 +62,7 @@ heroku logs --tail
 ## Questions?
 
 Email [battlesnake@sendwithus.com](mailto:battlesnake@sendwithus.com), or tweet [@send_with_us](http://twitter.com/send_with_us).
+=======
+# battlesnake
+code for 2018 battlesnake competition
+>>>>>>> 4a47ffbdce0a7b8beec988830987343d9717da2d
