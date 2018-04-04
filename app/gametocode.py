@@ -5,6 +5,7 @@ import astar
 def main():
 
     #t1 = time.time()
+    #test
 
     sneks = [[(17,17),(17,18)],[(9,3),(9,4)]]
     snack = [(5,4),(3,3)]
@@ -16,7 +17,7 @@ def main():
     #print(t2-t1)
 
 def tonumpy (enemies ,food, width, height):
-
+    #takes the board info from the server and converts it to a board of 1s and 0s
     code_board = np.zeros((height,width), dtype=int)
     #print(code_board)
 

@@ -1,4 +1,5 @@
 def parsesnakes(data):
+        #gets coordinance of all snakes and differentiates from this snake
 	snakes = []
 
 	for snake in data['snakes']['data']:

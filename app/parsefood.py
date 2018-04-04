@@ -1,4 +1,5 @@
 def parsefood(data):
+    #get food coordinance from server
 	foods = []
 
 	for food in data['food']['data']:
