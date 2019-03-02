@@ -62,7 +62,7 @@ def move():
     board,goal,head = gametocode.tonumpy(snakes,omnom,board_width,board_height)
     direction = astar.astar(board,head,goal)
     
-    result, board = headon.detect_headon(direction,board,snakes)
+#    result, board = headon.detect_headon(direction,board,snakes)
 #    if result:
 #        new_direction = astar.astar(board,head,goal)
 #        if new_direction != 
