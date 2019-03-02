@@ -13,10 +13,10 @@ def parsesnakes(data):
                 x.append(snake[i]['body'][j]['x'])
                 y.append(snake[i]['body'][j]['y'])
                     
-        if snake == data['you']:
-    	    snakes.insert(0,list(zip(y,x)))
-        else:
-            snakes.append(list(zip(y,x)))
+        #if snake == data['you']:
+    	    #snakes.insert(0,list(zip(y,x)))
+        #else:
+        snakes.append(list(zip(y,x)))
     
     print (snakes)
     return snakes
