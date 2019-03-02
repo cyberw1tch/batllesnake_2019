@@ -2,9 +2,9 @@ def parsesnakes(data):
         #gets coordinance of all snakes and differentiates from this snake
 	snakes = []
 
-	for snake in data['board']['snakes']:
-		x = [snake['body'][i]['x'] for i in range(len(snake['body']))]
-		y = [snake['body'][i]['y'] for i in range(len(snake['body']))]
+	for snake in data['snakes']['data']:
+		x = [snake['body']['data'][i]['x'] for i in range(snake['length'])]
+		y = [snake['body']['data'][i]['y'] for i in range(snake['length'])]
 
 		if snake == data['you']:
 			snakes.insert(0,list(zip(y,x)))
