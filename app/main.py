@@ -56,8 +56,8 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    board_width = data['board']['width'] - 1
-    board_height = data['board']['height'] - 1
+    board_width = data['board']['width']
+    board_height = data['board']['height']
     snakes = parsesnakes.parsesnakes(data)
     omnom = parsefood.parsefood(data)
     board,goal,head = gametocode.tonumpy(snakes,omnom,board_width,board_height)

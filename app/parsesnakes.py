@@ -3,8 +3,8 @@ def parsesnakes(data):
 	snakes = []
 
 	for snake in data['board']['snakes']:
-		x = [snake['body'][i]['x'] for i in range(len(snake['body']))]
-		y = [snake['body'][i]['y'] for i in range(len(snake['body']))]
+		x = [snake[i]['body']['x'] for i in range(len(snake['body']))]
+		y = [snake[i]['body']['y'] for i in range(len(snake['body']))]
 
 		if snake == data['you']:
 			snakes.insert(0,list(zip(y,x)))
