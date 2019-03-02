@@ -3,6 +3,7 @@ import os
 import random
 import bottle
 import parsefood
+import parsesnakes
 import astar
 import gametocode
 
