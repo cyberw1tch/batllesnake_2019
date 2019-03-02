@@ -3,6 +3,7 @@ import os
 import random
 import bottle
 import parsefood
+import parsesnakes
 import astar
 import gametocode
 
@@ -36,9 +37,9 @@ def ping():
 @bottle.post('/start')
 def start():
     data = bottle.request.json
-    game_id = data.get('game_id')
-    board_width = data.get('width')
-    board_height = data.get('height')
+    #game_id = data.get('game_id')
+    #board_width = data.get('width')
+    #board_height = data.get('height')
 
     """
     TODO: If you intend to have a stateful snake AI,
@@ -55,8 +56,8 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    board_width = data.get('width')
-    board_height = data.get('height')
+    board_width = data['board']['width']
+    board_height = data['board']['height']
     snakes = parsesnakes.parsesnakes(data)
     omnom = parsefood.parsefood(data)
     board,goal,head = gametocode.tonumpy(snakes,omnom,board_width,board_height)
